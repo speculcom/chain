@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>2026 链增补 | 链</title>
-  <meta name="description" content="2026 链增补：Algorand x402、ERC-4337、ERC-8004、AP2、Visa TAP 与 Mastercard Agent Pay 的规格、状态与边界；每条标已上线、Draft、生产未确认或卡网络 live。" />
-  <link rel="canonical" href="https://chain.specul.com/2026.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="2026 链增补 | 链" />
-  <meta property="og:url" content="https://chain.specul.com/2026.html" />
-  <meta property="og:title" content="2026 链增补 | 链" />
-  <meta property="og:description" content="2026 链增补：Algorand x402、ERC-4337、ERC-8004、AP2、Visa TAP 与 Mastercard Agent Pay 的规格、状态与边界；每条标已上线、Draft、生产未确认或卡网络 live。" />
-  <meta property="og:locale" content="zh_CN" />
-  <meta property="og:locale:alternate" content="en_US" />
-  <link rel="alternate" hreflang="zh-CN" href="https://chain.specul.com/2026.html" />
-  <link rel="alternate" hreflang="en" href="https://chain.specul.com/2026.html?lang=en" />
-  <link rel="alternate" hreflang="x-default" href="https://chain.specul.com/2026.html" />
-  <meta name="theme-color" content="#16121f" />
-  <link rel="icon" type="image/png" href="assets/brand/dandelion-favicon-site.png" />
-  <link rel="apple-touch-icon" href="assets/brand/dandelion-apple-touch-site.png" />
-  <script src="brand.js?v=37d1072be69b"></script>
-  <link rel="stylesheet" href="brand.css?v=37d1072be69b" />
-  <link rel="stylesheet" href="site.css" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>2026 链增补 | 链</title>
+<meta content="2026 链增补：Algorand x402、ERC-4337、ERC-8004、AP2、Visa TAP 与 Mastercard Agent Pay 的规格、状态与边界；每条标已上线、Draft、生产未确认或卡网络 live。" name="description"/>
+<link href="https://chain.specul.com/2026.html" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="2026 链增补 | 链" property="og:site_name"/>
+<meta content="https://chain.specul.com/2026.html" property="og:url"/>
+<meta content="2026 链增补 | 链" property="og:title"/>
+<meta content="2026 链增补：Algorand x402、ERC-4337、ERC-8004、AP2、Visa TAP 与 Mastercard Agent Pay 的规格、状态与边界；每条标已上线、Draft、生产未确认或卡网络 live。" property="og:description"/>
+<meta content="zh_CN" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="#16121f" name="theme-color"/>
+<link href="assets/brand/dandelion-favicon-site.png" rel="icon" type="image/png"/>
+<link href="assets/brand/dandelion-apple-touch-site.png" rel="apple-touch-icon"/>
+<script src="brand.js?v=37d1072be69b"></script>
+<link href="brand.css?v=37d1072be69b" rel="stylesheet"/>
+<link href="site.css" rel="stylesheet"/>
+<style>
 .u26-hero{padding:24px 0 14px}
 .u26-kicker{margin:0 0 8px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);font-weight:650}
 .u26-h1{margin:0;max-width:20ch;font-size:clamp(30px,4.3vw,52px);line-height:1.1;letter-spacing:-.03em;color:var(--ink)}
@@ -83,8 +80,8 @@
 .nf-art svg{display:block;width:100%;height:auto}
 @media(max-width:900px){.u26-card{grid-column:span 12}.u26-two{grid-template-columns:1fr}.u26-row{grid-template-columns:70px 1fr}.u26-row a{display:none}.u26-map{grid-template-columns:1fr}.u26-chain{grid-template-columns:1fr 1fr}.u26-chain div:nth-child(2)::after{content:none}.nf-grid{grid-template-columns:1fr}.nf-art{max-width:200px;margin:8px auto 0}}
 </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"2026 链增补 | 链","description":"2026 链增补：Algorand x402、ERC-4337、ERC-8004、AP2、Visa TAP 与 Mastercard Agent Pay 的规格、状态与边界；每条标已上线、Draft、生产未确认或卡网络 live。","url":"https://chain.specul.com/2026.html","inLanguage":["zh-CN","en"],"isPartOf":{"@type":"WebSite","url":"https://specul.com/"}}</script>
-</head>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"2026 链增补 | 链","description":"2026 链增补：Algorand x402、ERC-4337、ERC-8004、AP2、Visa TAP 与 Mastercard Agent Pay 的规格、状态与边界；每条标已上线、Draft、生产未确认或卡网络 live。","url":"https://chain.specul.com/2026.html","inLanguage":["zh-CN","en"],"isPartOf":{"@type":"WebSite","url":"https://specul.com/"}}</script>
+<link href="https://chain.specul.com/2026.html" hreflang="zh-CN" rel="alternate"/><link href="https://chain.specul.com/en/2026.html" hreflang="en" rel="alternate"/><link href="https://chain.specul.com/2026.html" hreflang="x-default" rel="alternate"/></head>
 <!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
      同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
      而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）
@@ -93,195 +90,187 @@
      ⚠ 这段注释里**不能出现反引号**：它在模板字符串内部，反引号会提前结束模板
      （写这段时踩了第 4 次；pitfalls 里早有记录）。 -->
 <body class="brand-ambient has-tabbar has-tabbar-1row">
-  <a class="t-skip" href="#main"><span data-zh>跳到主要内容</span><span data-en>Skip to main content</span></a>
-  <header class="site-header">
-    <div class="container site-bar">
-      <a class="brand" href="https://specul.com/" title="投机取巧">
-        <span class="brand-dot" aria-hidden="true"></span>
-        <span class="brand-text">
-          <span class="brand-name" id="markName" data-zh-name="投机取巧" data-en-name="Speculative Speculation">投机取巧</span>
-          <span class="brand-sub" id="markSub" data-zh-sub="Speculative Speculation" data-en-sub="">Speculative Speculation</span>
-        </span>
-      </a>
-      <nav class="nav-links" aria-label="站点导航">
-        <a href="https://specul.com/"><span data-zh>首页</span><span data-en>Home</span></a>
-        <a href="https://learn.specul.com/"><span data-zh>学 AI</span><span data-en>Learn</span></a>
-        <a href="https://tools.specul.com/"><span data-zh>工具</span><span data-en>Tools</span></a>
-        <a href="https://models.specul.com/"><span data-zh>模型</span><span data-en>Models</span></a>
-        <a href="https://demos.specul.com/"><span data-zh>作品演示</span><span data-en>Playground</span></a>
-        <a href="https://oss.specul.com/"><span data-zh>开源库</span><span data-en>OSS</span></a>
-        <a href="https://hardware.specul.com/"><span data-zh>硬件算力</span><span data-en>Compute</span></a>
-        <a href="https://papers.specul.com/"><span data-zh>AI 论文</span><span data-en>AI Papers</span></a>
-        <a href="https://chain.specul.com/" aria-current="page"><span data-zh>链</span><span data-en>Chain</span></a>
-        <a href="https://nav.specul.com/"><span data-zh>AI 导航</span><span data-en>AI Directory</span></a>
-      </nav>
-      <!-- 2026-10-10：.nav-tools 从 nav 元素**内部**移到外面，与 .nav-links 平级。
+<a class="t-skip" href="#main"><span data-zh="">跳到主要内容</span><span data-en="">Skip to main content</span></a>
+<header class="site-header">
+<div class="container site-bar">
+<a class="brand" href="https://specul.com/" title="投机取巧">
+<span aria-hidden="true" class="brand-dot"></span>
+<span class="brand-text">
+<span class="brand-name" data-en-name="Speculative Speculation" data-zh-name="投机取巧" id="markName">投机取巧</span>
+<span class="brand-sub" data-en-sub="" data-zh-sub="Speculative Speculation" id="markSub">Speculative Speculation</span>
+</span>
+</a>
+<nav aria-label="站点导航" class="nav-links">
+<a href="https://specul.com/"><span data-zh="">首页</span><span data-en="">Home</span></a>
+<a href="https://learn.specul.com/"><span data-zh="">学 AI</span><span data-en="">Learn</span></a>
+<a href="https://tools.specul.com/"><span data-zh="">工具</span><span data-en="">Tools</span></a>
+<a href="https://models.specul.com/"><span data-zh="">模型</span><span data-en="">Models</span></a>
+<a href="https://demos.specul.com/"><span data-zh="">作品演示</span><span data-en="">Playground</span></a>
+<a href="https://oss.specul.com/"><span data-zh="">开源库</span><span data-en="">OSS</span></a>
+<a href="https://hardware.specul.com/"><span data-zh="">硬件算力</span><span data-en="">Compute</span></a>
+<a href="https://papers.specul.com/"><span data-zh="">AI 论文</span><span data-en="">AI Papers</span></a>
+<a aria-current="page" href="https://chain.specul.com/"><span data-zh="">链</span><span data-en="">Chain</span></a>
+<a href="https://nav.specul.com/"><span data-zh="">AI 导航</span><span data-en="">AI Directory</span></a>
+</nav>
+<!-- 2026-10-10：.nav-tools 从 nav 元素**内部**移到外面，与 .nav-links 平级。
            放里面时窄屏下它会跟着链接一起换行：链接占满整行 → 按钮被挤到第三条
            （实测顶栏 134px、按钮组孤零零一行）。移出来后它与品牌同行，
            链接独占第二行居中 —— 这才是下面注释里方案 B 想要的样子。 -->
-      <span class="nav-tools">
-        <a class="icon-btn" href="https://specul.com/search.html" aria-label="搜索" data-ui-aria-label-zh="搜索" data-ui-aria-label-en="Search" title="搜索全站" data-ui-title-zh="搜索全站" data-ui-title-en="Search all sites"><span aria-hidden="true">⌕</span></a>
-        <button class="icon-btn" id="themeBtn" type="button" aria-label="切换明暗主题" title="切换明暗主题">☾</button>
-        <button class="icon-btn" id="langBtn" type="button" aria-label="Switch language" title="Switch language">EN</button>
-      </span>
-      <!-- B6（2026-10-09）：窄屏（≤900px）下 .nav-links 会隐藏，这个汉堡是替代入口。
+<span class="nav-tools">
+<a aria-label="搜索" class="icon-btn" data-ui-aria-label-en="Search" data-ui-aria-label-zh="搜索" data-ui-title-en="Search all sites" data-ui-title-zh="搜索全站" href="https://specul.com/search.html" title="搜索全站"><span aria-hidden="true">⌕</span></a>
+<button aria-label="切换明暗主题" class="icon-btn" id="themeBtn" title="切换明暗主题" type="button">☾</button>
+<a aria-label="Switch to English" class="icon-btn" href="/en/2026.html" hreflang="en" id="langBtn" lang="en" title="Switch to English">EN</a>
+</span>
+<!-- B6（2026-10-09）：窄屏（≤900px）下 .nav-links 会隐藏，这个汉堡是替代入口。
            行为在共享 brand.js 里（一处实现、十站共用），样式在共享 brand.css。
            无脚本时 CSS 不会显示它，而是把 .nav-links 在窄屏放出来 —— 不会出现
            「导航被藏进一个点了没反应的按钮」。 -->
-      <button class="nav-burger" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navDrawer">
-        <i></i><i></i><i></i>
-      </button>
-    </div>
-  </header>
-  <div class="nav-scrim"></div>
-  <aside class="nav-drawer" id="navDrawer" aria-hidden="true" aria-label="站点导航">
-    <div class="nav-drawer-h">
-      <span class="brand-name"><span data-zh>投机取巧</span><span data-en>Speculative Speculation</span></span>
-      <span class="brand-sub" data-zh-sub="Speculative Speculation" data-en-sub="">Speculative Speculation</span>
-      <button class="nav-dclose" type="button" aria-label="关闭">×</button>
-    </div>
-    <nav class="nav-drawer-list">
-      <a href="https://specul.com/"><span><span data-zh>首页</span><span data-en>Home</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://learn.specul.com/"><span><span data-zh>学 AI</span><span data-en>Learn</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://tools.specul.com/"><span><span data-zh>工具</span><span data-en>Tools</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://models.specul.com/"><span><span data-zh>模型</span><span data-en>Models</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://demos.specul.com/"><span><span data-zh>作品演示</span><span data-en>Playground</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://oss.specul.com/"><span><span data-zh>开源库</span><span data-en>OSS</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://hardware.specul.com/" class="nav-group-start"><span><span data-zh>硬件算力</span><span data-en>Compute</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://papers.specul.com/"><span><span data-zh>AI 论文</span><span data-en>AI Papers</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://chain.specul.com/" aria-current="page"><span><span data-zh>链</span><span data-en>Chain</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://nav.specul.com/" class="nav-group-start" data-nav-group="external"><span><span data-zh>AI 导航</span><span data-en>AI Directory</span></span><span class="ar" aria-hidden="true">↗</span></a>
-    </nav>
-    <div class="nav-drawer-foot">
-      <p><span data-zh>内容站覆盖学、用、选、跑；AI 导航是站外的 AI 网站目录，点出去看。</span><span data-en>Content sites cover learn, use, choose and run; AI Directory is a catalogue of off-site AI sites.</span></p>
-      <nav><a href="https://specul.com/legal.html"><span data-zh>法律条款</span><span data-en>Legal terms</span></a></nav>
-    </div>
-  </aside>
-  <main id="main">
-
-      <section class="u26-hero"><div class="container">
-    <p class="u26-kicker"><span data-zh>链 · 2026 增补 · 2026-11-24</span><span data-en>Chain · 2026 additions · 2026-11-24</span></p>
-    <h1 class="u26-h1"><span data-zh>Agent 经济的五层：<br>账户、身份、支付、卡网络、x402</span><span data-en>Five layers under the agent economy:<br>accounts, identity, payments, card networks, x402</span></h1>
-    <p class="u26-lede"><span data-zh>ERC-4337 解决「不改共识层也能自定义账户」；ERC-8004 解决「陌生 Agent 凭什么被信任」；AP2 解决「Agent 代付的授权证据」；Visa TAP 与 Mastercard Agent Pay 把卡组织的真实交易跑通；Algorand x402 把原子与赞助交易接进机器支付。前三条状态完全不同：成熟标准、Draft、生产未确认；卡网络已 live，但不能替代 AP2 的 mandate 层。</span><span data-en>ERC-4337 handles custom accounts without consensus changes; ERC-8004 handles why an unknown agent is trusted; AP2 handles authorisation evidence for agent payments; Visa TAP and Mastercard Agent Pay run real card-network transactions; Algorand x402 adds atomic and sponsored transactions to machine payments. The first three have very different status — a mature standard, a Draft and unconfirmed production — while card networks are live but do not replace AP2’s mandate layer.</span></p>
-    <p class="u26-note"><span data-zh>把「已上线 / Draft / 生产未确认 / 卡网络 live / 技术接入」分开写，是本页最重要的口径。不要把「有规范」写成「已普及」，也不要把「卡网络已跑通」写成「AP2 已落地」。</span><span data-en>Separating live / Draft / unconfirmed-production / card-network-live / technical-integration is the point of this page. Do not write “has a spec” as “widely used”, or “card networks are live” as “AP2 is deployed”.</span></p>
-    
-  </div></section>
-      <section class="u26-section"><div class="container">
-        <figure class="u26-figure"><svg class="vz-svg" viewBox="0 0 760 258" role="img" aria-label="时间线" data-ui-aria-label-zh="时间线" data-ui-aria-label-en="Timeline" xmlns="http://www.w3.org/2000/svg">
-      <text x="104" y="27" class="vz-t-dim" text-anchor="end">2026-11-23</text>
-      <line x1="120" y1="10" x2="120" y2="54" class="vz-axis"/>
-      <circle cx="120" cy="22" r="6" style="fill:var(--cat-teal)"/>
-      <text x="140" y="27" class="vz-t-strong">Algorand x402</text>
-      <text x="140" y="47" class="vz-t-dim">协议 / 支付</text>
-      <text x="104" y="75" class="vz-t-dim" text-anchor="end">2026-04-28</text>
-      <line x1="120" y1="58" x2="120" y2="102" class="vz-axis"/>
-      <circle cx="120" cy="70" r="6" style="fill:var(--cat-teal)"/>
-      <text x="140" y="75" class="vz-t-strong">AP2</text>
-      <text x="140" y="95" class="vz-t-dim">协议 / 支付</text>
-      <text x="104" y="123" class="vz-t-dim" text-anchor="end">2026-01-29</text>
-      <line x1="120" y1="106" x2="120" y2="150" class="vz-axis"/>
-      <circle cx="120" cy="118" r="6" style="fill:var(--cat-teal)"/>
-      <text x="140" y="123" class="vz-t-strong">ERC-8004</text>
-      <text x="140" y="143" class="vz-t-dim">协议 / 身份</text>
-      <text x="104" y="171" class="vz-t-dim" text-anchor="end">2025-10</text>
-      <line x1="120" y1="154" x2="120" y2="198" class="vz-axis"/>
-      <circle cx="120" cy="166" r="6" style="fill:var(--cat-teal)"/>
-      <text x="140" y="171" class="vz-t-strong">Visa TAP + Mastercard Agent Pay</text>
-      <text x="140" y="191" class="vz-t-dim">协议 / 卡组织</text>
-      <text x="104" y="219" class="vz-t-dim" text-anchor="end">2021-09</text>
-      <line x1="120" y1="202" x2="120" y2="246" class="vz-axis"/>
-      <circle cx="120" cy="214" r="6" style="fill:var(--cat-teal)"/>
-      <text x="140" y="219" class="vz-t-strong">ERC-4337</text>
-      <text x="140" y="239" class="vz-t-dim">协议 / 账户抽象</text></svg><figcaption><span data-zh>按日期最新在上；ERC-4337 为 2021 年标准，2026 年仍是底座；TAP、Agent Pay、ERC-8004、AP2、Algorand x402 并列。</span><span data-en>Newest first; ERC-4337 is a 2021 standard still foundational in 2026; TAP, Agent Pay, ERC-8004, AP2 and Algorand x402 sit alongside it.</span></figcaption></figure>
-        <div class="u26-grid"><article class="u26-card" id="algorand-x402">
-    <div class="u26-meta"><span class="u26-badge">2026-11-23</span><span class="u26-tag"><span data-zh>协议 / 支付</span><span data-en>Protocol / payments</span></span></div>
-    <h2><span data-zh>Algorand x402：原子交易 + 赞助交易</span><span data-en>Algorand x402: atomic and sponsored transactions</span></h2>
-    <p class="u26-p"><span data-zh>Algorand 把 x402 的支持从 2 月的技术接入推进到原子交易与赞助交易：多个动作可作为一组交易同时成功或同时失败；facilitator / 服务方可以代付网络费，实现 gasless 支付流。x402 用 CAIP-2 标识网络，Algorand 主网 USDC 为默认资产之一。</span><span data-en>Algorand has extended its x402 support from the February technical integration to atomic and sponsored transactions: multiple actions settle together or fail together; a facilitator or service can cover network fees for gasless payment flows. x402 uses CAIP-2 network identifiers, with Algorand mainnet USDC among the default assets.</span></p>
-    <dl class="u26-dl"><dt><span data-zh>网络</span><span data-en>network</span></dt><dd>Algorand Mainnet / Testnet（CAIP-2）</dd><dt><span data-zh>默认资产</span><span data-en>asset</span></dt><dd>USDC（ASA 31566704）</dd><dt><span data-zh>原子交易</span><span data-en>atomic</span></dt><dd>分组交易全成或全败</dd><dt><span data-zh>赞助</span><span data-en>sponsored</span></dt><dd>facilitator 代付网络费</dd><dt><span data-zh>状态</span><span data-en>status</span></dt><dd>技术接入已上线；交易量未披露</dd></dl>
-    <div class="u26-block"><b><span data-zh>为什么值得看</span><span data-en>Why it matters</span></b><p><span data-zh>Agent 支付的难点不是「能付」，而是「付款、授权与用量记录要么一起成立、要么一起回滚」。Algorand 的原生原子分组把这三步压进一个结算单元；赞助交易则让没有 ALGO 的 Agent 也能先付款。对做按次 API、MCP 付费工具与机器对机器结算的人，这是 x402 多链化里值得看的一步。</span><span data-en>The hard part of agent payments is not “can pay” but making payment, authorisation and usage accounting either all hold or all roll back. Algorand’s native atomic grouping puts them into one settlement unit; sponsored transactions let an agent without ALGO pay first. For pay-per-call APIs, paid MCP tools and M2M settlement, it is a notable step in x402’s multi-chain expansion.</span></p></div>
-    
-    <div class="u26-block u26-boundary"><b><span data-zh>边界 / 它没主张什么</span><span data-en>Boundary / what it does not claim</span></b><p><span data-zh>原子分组是 Algorand 账本能力，不是 x402 新增的跨链标准；赞助交易仍由 facilitator 承担信用与合规风险。官方页面没有披露真实交易量、失败率或商户数，2026-11-23 的报道是二手来源。它没主张「x402 已在 Algorand 大规模生产」或「原子交易消除支付纠纷」。</span><span data-en>Atomic grouping is an Algorand ledger capability, not a new cross-chain x402 standard; sponsored transactions still leave credit and compliance risk with the facilitator. Official pages disclose no live volume, failure rate or merchant count, and the 2026-11-23 report is secondary. It does not claim x402 is at large-scale production on Algorand, or that atomic transactions eliminate payment disputes.</span></p></div>
-    <p class="u26-src"><span data-zh>来源</span><span data-en>Sources</span>：<a href="https://algorand.co/agentic-commerce/x402" target="_blank" rel="noopener"><span data-zh>Algorand x402 官方页</span><span data-en>Algorand x402 official page</span></a> · <a href="https://algorand.co/agentic-commerce/x402/developers" target="_blank" rel="noopener"><span data-zh>Algorand x402 开发者页</span><span data-en>Algorand x402 developers</span></a> · <a href="https://coinmarketcap.com/community/articles/69f4ac0a7f48160f05edf0c4/" target="_blank" rel="noopener"><span data-zh>CoinMarketCap 报道（2026-11-23）</span><span data-en>CoinMarketCap report (2026-11-23)</span></a></p>
-  </article><article class="u26-card" id="ap2">
-    <div class="u26-meta"><span class="u26-badge">2026-04-28</span><span class="u26-tag"><span data-zh>协议 / 支付</span><span data-en>Protocol / payments</span></span></div>
-    <h2><span data-zh>AP2：v0.2 + 捐给 FIDO Alliance</span><span data-en>AP2: v0.2 and donation to the FIDO Alliance</span></h2>
-    <p class="u26-p"><span data-zh>Google 把 Agent Payments Protocol 捐给 FIDO，同时发布 v0.2，新增 Human Not Present 自主支付；Checkout / Payment 两类 mandate，open / closed 两种，SD-JWT 签名。</span><span data-en>Google donated AP2 to FIDO and released v0.2 with Human Not Present autonomous payments; Checkout / Payment mandates, each open or closed, signed with SD-JWT.</span></p>
-    <dl class="u26-dl"><dt><span data-zh>提出</span><span data-en>introduced</span></dt><dd>2025-09</dd><dt><span data-zh>v0.2</span><span data-en>v0.2</span></dt><dd>2026-04-28</dd><dt><span data-zh>治理</span><span data-en>governance</span></dt><dd>FIDO Alliance</dd><dt><span data-zh>生产</span><span data-en>production</span></dt><dd>截至 2026-10 未确认</dd></dl>
-    <div class="u26-block"><b><span data-zh>为什么值得看</span><span data-en>Why it matters</span></b><p><span data-zh>它把「Agent 代付」的授权范围写成可验证的 mandate，而不是传一张卡号；对做 Agent 结账、订阅与争议处理的团队，这是必须理解的协议层。</span><span data-en>It writes the scope of agent payment authorisation into verifiable mandates instead of passing a card number; for agent checkout, subscriptions and disputes, it is a required protocol layer.</span></p></div>
-    
-    <div class="u26-block u26-boundary"><b><span data-zh>边界 / 它没主张什么</span><span data-en>Boundary / what it does not claim</span></b><p><span data-zh>截至 2026-10 没有公开确认的生产交易；v0.2 只经历两个版本；AP2 不做 checkout / 目录 / 结算，要嵌在 UCP 等商业协议里；FIDO 接管刚开始。它没主张「已大规模落地」或「Agent 可无条件扣款」。</span><span data-en>No publicly confirmed production transaction as of October 2026; v0.2 is only the second release; AP2 does no checkout, catalogue or settlement and must sit inside UCP or another commerce protocol; FIDO stewardship just began. It does not claim scale, or unconditional agent charging.</span></p></div>
-    <p class="u26-src"><span data-zh>来源</span><span data-en>Sources</span>：<a href="https://blog.google/products-and-platforms/platforms/google-pay/agent-payments-protocol-fido-alliance/" target="_blank" rel="noopener"><span data-zh>Google 博客</span><span data-en>Google blog</span></a> · <a href="https://ap2-protocol.org/faq/" target="_blank" rel="noopener"><span data-zh>AP2 FAQ</span><span data-en>AP2 FAQ</span></a></p>
-  </article><article class="u26-card" id="erc-8004">
-    <div class="u26-meta"><span class="u26-badge">2026-01-29</span><span class="u26-tag"><span data-zh>协议 / 身份</span><span data-en>Protocol / identity</span></span></div>
-    <h2><span data-zh>ERC-8004：Trustless Agents 上主网</span><span data-en>ERC-8004: Trustless Agents goes mainnet</span></h2>
-    <p class="u26-p"><span data-zh>三套 singleton registry：Identity（ERC-721 + agent card JSON，含 A2A / MCP 端点）、Reputation、Validation；与 x402 支付集成；仍是 Draft，v2 在开发。</span><span data-en>Three singleton registries: Identity (ERC-721 + agent-card JSON with A2A / MCP endpoints), Reputation and Validation; integrates with x402 payments; still Draft, with v2 in development.</span></p>
-    <dl class="u26-dl"><dt><span data-zh>上线</span><span data-en>mainnet</span></dt><dd>2026-01-29</dd><dt><span data-zh>注册表</span><span data-en>registries</span></dt><dd>Identity / Reputation / Validation</dd><dt><span data-zh>支付</span><span data-en>payments</span></dt><dd>x402</dd><dt><span data-zh>状态</span><span data-en>status</span></dt><dd>Draft；v2 开发中</dd></dl>
-    <div class="u26-block"><b><span data-zh>为什么值得看</span><span data-en>Why it matters</span></b><p><span data-zh>它把「陌生 Agent 凭什么被信任」拆成可查询的三层，而不是一句「上链即可信」。对做 Agent 市场、跨组织委派与支付的人，这是 2026 年最值得先读的协议。</span><span data-en>It splits “why trust an unknown agent” into three queryable layers instead of “on-chain means trust”. For agent marketplaces, cross-org delegation and payments, it is the first 2026 protocol to read.</span></p></div>
-    
-    <div class="u26-block u26-boundary"><b><span data-zh>边界 / 它没主张什么</span><span data-en>Boundary / what it does not claim</span></b><p><span data-zh>声誉可被女巫/刷分；验证是可插拔，不是默认开启；注册只证明条目存在，不证明能力或合法性；跨链注册是自声明。它没主张「所有 Agent 都必须注册」或「注册即可信」。</span><span data-en>Reputation can be sybil-attacked or farmed; validation is pluggable, not on by default; registration proves an entry exists, not capability or legality; cross-chain registrations are self-declared. It does not claim every agent must register, or that registration equals trust.</span></p></div>
-    <p class="u26-src"><span data-zh>来源</span><span data-en>Sources</span>：<a href="https://www.8004.org/blog/welcome-to-8004" target="_blank" rel="noopener"><span data-zh>8004 官方博客</span><span data-en>8004 official blog</span></a> · <a href="https://www.8004.org/learn" target="_blank" rel="noopener"><span data-zh>8004 学习页</span><span data-en>8004 learn</span></a></p>
-  </article><article class="u26-card" id="visa-mastercard-agent-payments">
-    <div class="u26-meta"><span class="u26-badge">2025-10</span><span class="u26-tag"><span data-zh>协议 / 卡组织</span><span data-en>Protocol / card networks</span></span></div>
-    <h2><span data-zh>Visa TAP + Mastercard Agent Pay：卡组织把 Agent 支付跑进真实商户</span><span data-en>Visa TAP + Mastercard Agent Pay: card networks put agent payments into live merchants</span></h2>
-    <p class="u26-p"><span data-zh>Visa 2025-10-14 发布 TAP，用 Web Bot Auth 的 HTTP 签名让商户区分「浏览」与「支付」，2026-07 在欧洲 30+ 发卡行与 lastminute.com 等商户跑通；2026-10 BILL + Billtrust 用 TAP 完成 B2B 发票支付 pilot。Mastercard Agent Pay 用 KYA 注册、每个 agent 独立 Agentic Token、Payment Passkeys 与 Verifiable Intent，2025 美国上线，2026 在新加坡、亚太与拉美多市场 live。</span><span data-en>Visa released TAP on 14 October 2025: Web Bot Auth HTTP signatures let merchants distinguish browsing from paying, with live European purchases across 30+ issuers and merchants such as lastminute.com in July 2026, and a BILL + Billtrust B2B invoice-payment pilot in October 2026. Mastercard Agent Pay combines KYA registration, a unique Agentic Token per agent, Payment Passkeys and Verifiable Intent; it launched in the US in 2025 and went live across Singapore, Asia-Pacific and Latin America in 2026.</span></p>
-    <dl class="u26-dl"><dt><span data-zh>发布</span><span data-en>launch</span></dt><dd>TAP 2025-10-14；Agent Pay 2025</dd><dt><span data-zh>身份</span><span data-en>identity</span></dt><dd>TAP HTTP 签名 + Agentic Directory；Mastercard KYA</dd><dt><span data-zh>授权</span><span data-en>auth</span></dt><dd>Visa token + 用户限额；Mastercard Passkeys + 预授权</dd><dt><span data-zh>状态</span><span data-en>status</span></dt><dd>2026 真实交易 / live pilots</dd><dt><span data-zh>结算</span><span data-en>settlement</span></dt><dd>卡网络，不是链上结算</dd></dl>
-    <div class="u26-block"><b><span data-zh>为什么值得看</span><span data-en>Why it matters</span></b><p><span data-zh>补上链站缺的一层：Agent 支付不只在链上，卡组织已经用签名、token 与生物识别把真实交易跑通。对照 AP2 的 mandate 层，能看清谁在做授权、谁在做结算、谁只是规范。</span><span data-en>It fills a missing layer: agent payments are not only on-chain. Card networks already run real transactions with signatures, tokens and biometrics. Compared with AP2’s mandate layer, it shows who authorises, who settles and who only has a spec.</span></p></div>
-    
-    <div class="u26-block u26-boundary"><b><span data-zh>边界 / 它没主张什么</span><span data-en>Boundary / what it does not claim</span></b><p><span data-zh>TAP 与 Agent Pay 不是同一标准，也不能互相替代；它们依赖卡网络与发卡行，退款、争议与拒付仍在既有卡规则里。AP2 截至 2026-10 仍没有公开确认的生产交易；把「卡网络已 live」写成「AP2 已普及」是混层。</span><span data-en>TAP and Agent Pay are different standards and cannot substitute for each other; they depend on card networks and issuers, and refunds, disputes and chargebacks stay under existing card rules. AP2 still has no publicly confirmed production transaction as of October 2026; writing “card networks are live” as “AP2 is everywhere” conflates layers.</span></p></div>
-    <p class="u26-src"><span data-zh>来源</span><span data-en>Sources</span>：<a href="https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.21716.html?categoryid=2826687" target="_blank" rel="noopener"><span data-zh>Visa TAP 发布</span><span data-en>Visa TAP launch</span></a> · <a href="https://www.visa.co.uk/about-visa/newsroom/press-releases.3457328.html" target="_blank" rel="noopener"><span data-zh>Visa 欧洲 live</span><span data-en>Visa Europe live</span></a> · <a href="https://investor.visa.com/news/news-details/2026/Visa-BILL-and-Billtrust-Launch-First-Live-Pilot-for-Trusted-AI-Agent-Payments-Between-Buyer-and-Supplier-Platforms/default.aspx" target="_blank" rel="noopener"><span data-zh>BILL + Billtrust pilot</span><span data-en>BILL + Billtrust pilot</span></a> · <a href="https://www.mastercard.com/news/ap/en/newsroom/press-releases/en/2026/mastercard-delivers-its-first-live-agentic-transaction-in-singapore-with-dbs-and-uob" target="_blank" rel="noopener"><span data-zh>Mastercard Agent Pay</span><span data-en>Mastercard Agent Pay</span></a> · <a href="https://www.mastercard.com/europe/en/news-and-trends/stories/2026/agentic-commerce-identity-know-your-agent.html" target="_blank" rel="noopener"><span data-zh>Mastercard Trust Framework</span><span data-en>Mastercard Trust Framework</span></a></p>
-  </article><article class="u26-card" id="erc-4337">
-    <div class="u26-meta"><span class="u26-badge">2021-09</span><span class="u26-tag"><span data-zh>协议 / 账户抽象</span><span data-en>Protocol / account abstraction</span></span></div>
-    <h2><span data-zh>ERC-4337：不改共识层的账户抽象</span><span data-en>ERC-4337: account abstraction without consensus changes</span></h2>
-    <p class="u26-p"><span data-zh>UserOperation + 独立 mempool + Bundler + EntryPoint + Paymaster；用户意图不进共识层，也能做自定义签名、批量操作与代付 gas。</span><span data-en>UserOperation + a separate mempool + Bundler + EntryPoint + Paymaster; custom signatures, batching and sponsored gas without touching the consensus layer.</span></p>
-    <dl class="u26-dl"><dt><span data-zh>提出</span><span data-en>created</span></dt><dd>2021-09-29</dd><dt><span data-zh>核心</span><span data-en>object</span></dt><dd>UserOperation</dd><dt><span data-zh>角色</span><span data-en>roles</span></dt><dd>EntryPoint / Bundler / Paymaster</dd><dt><span data-zh>状态</span><span data-en>status</span></dt><dd>ERC Review</dd></dl>
-    <div class="u26-block"><b><span data-zh>为什么值得看</span><span data-en>Why it matters</span></b><p><span data-zh>它是「Agent 钱包」与「代付」绕不开的底座；理解 alt mempool 与 Paymaster，才能判断一个 Agent 支付方案是真的链上执行，还是只做了一个托管账户。</span><span data-en>It is the base that “agent wallets” and sponsorship cannot avoid; understanding the alt mempool and Paymaster is how you tell real on-chain execution from a custodial account.</span></p></div>
-    
-    <div class="u26-block u26-boundary"><b><span data-zh>边界 / 它没主张什么</span><span data-en>Boundary / what it does not claim</span></b><p><span data-zh>alt mempool 带来 bundler 中心化与审查风险；Paymaster 赞助可被滥用；不同 EntryPoint 版本兼容性要单独确认；不改共识层也意味着底层仍是 EOA + 合约。它没主张「保证 gasless」或「唯一 AA 路线」。</span><span data-en>The alt mempool brings bundler centralisation and censorship risk; Paymaster sponsorship can be abused; EntryPoint versions need separate compatibility checks; avoiding consensus changes leaves EOA + contract underneath. It does not claim guaranteed gasless transactions or the only AA route.</span></p></div>
-    <p class="u26-src"><span data-zh>来源</span><span data-en>Sources</span>：<a href="https://eips-wg.github.io/EIPs/4337/" target="_blank" rel="noopener"><span data-zh>EIP-4337 规范</span><span data-en>EIP-4337 spec</span></a> · <a href="https://docs.erc4337.io/core-standards/erc-4337" target="_blank" rel="noopener"><span data-zh>ERC-4337 文档</span><span data-en>ERC-4337 docs</span></a></p>
-  </article></div>
-        <p class="u26-note"><b><span data-zh>下一步</span><span data-en>Next</span>：</b><a href="https://chain.specul.com/"><span data-zh>回到链站看全部条目</span><span data-en>Back to all chain entries</span> →</a></p>
-      </div></section>
-    
-  </main>
-  <footer class="site-footer foot-single">
-    <div class="container foot-line">
-      <div class="foot-brand">
-        <span class="foot-brand-main">
-          <span class="brand-dot" aria-hidden="true"></span>
-          <span class="foot-copy"><span data-zh>投机取巧 · specul.com</span><span data-en>Specul · specul.com</span></span>
-        </span>
-        <span class="foot-license"><a href="https://specul.com/LICENSE-CONTENT.txt"><span data-zh>内容 CC BY 4.0</span><span data-en>Content CC BY 4.0</span></a><span class="sep" aria-hidden="true">·</span><a href="https://specul.com/LICENSE.txt"><span data-zh>代码 MIT</span><span data-en>Code MIT</span></a><span class="sep" aria-hidden="true">·</span><a class="foot-source" href="https://github.com/speculcom/ai-handbook" target="_blank" rel="noopener"><span data-zh>源码</span><span data-en>Source</span></a></span>
-      </div>
-      <nav class="foot-sites" aria-label="Footer site links">
-        <a class="site-link" href="https://specul.com/"><span data-zh>首页</span><span data-en>Home</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://learn.specul.com/"><span data-zh>学 AI</span><span data-en>Learn</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://tools.specul.com/"><span data-zh>工具</span><span data-en>Tools</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://models.specul.com/"><span data-zh>模型</span><span data-en>Models</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://demos.specul.com/"><span data-zh>演示</span><span data-en>Demos</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://oss.specul.com/"><span data-zh>开源</span><span data-en>OSS</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://hardware.specul.com/"><span data-zh>算力</span><span data-en>Compute</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://papers.specul.com/"><span data-zh>论文</span><span data-en>Papers</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://chain.specul.com/"><span data-zh>链</span><span data-en>Chain</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://nav.specul.com/"><span data-zh>导航</span><span data-en>Directory</span></a>
-      </nav>
-      <nav class="foot-legal" aria-label="Legal and corrections">
-        <a href="https://specul.com/legal.html"><span data-zh>法律</span><span data-en>Legal</span></a><span class="sep" aria-hidden="true">·</span>
-        <a href="https://specul.com/legal.html#s8"><span data-zh>隐私</span><span data-en>Privacy</span></a><span class="sep" aria-hidden="true">·</span>
-        <a href="https://specul.com/correct.html"><span data-zh>纠错</span><span data-en>Corrections</span></a>
-      </nav>
-    </div>
-  </footer>
-<nav class="nav-tabbar nav-tabbar-1row" aria-label="快捷导航">
-    <a href="https://specul.com/"><span class="ti" aria-hidden="true">◎</span><span data-zh>首页</span><span data-en>Home</span></a>
-    <a href="https://learn.specul.com/"><span class="ti" aria-hidden="true">▤</span><span data-zh>学AI</span><span data-en>Learn</span></a>
-    <a href="https://tools.specul.com/"><span class="ti" aria-hidden="true">◈</span><span data-zh>工具</span><span data-en>Tools</span></a>
-    <a href="https://models.specul.com/"><span class="ti" aria-hidden="true">▦</span><span data-zh>模型</span><span data-en>Models</span></a>
-    <a href="https://demos.specul.com/"><span class="ti" aria-hidden="true">▷</span><span data-zh>演示</span><span data-en>Demos</span></a>
-    <a href="https://oss.specul.com/"><span class="ti" aria-hidden="true">▧</span><span data-zh>开源</span><span data-en>OSS</span></a>
-    <a href="https://hardware.specul.com/"><span class="ti" aria-hidden="true">▣</span><span data-zh>算力</span><span data-en>Chips</span></a>
-    <a href="https://papers.specul.com/"><span class="ti" aria-hidden="true">▥</span><span data-zh>论文</span><span data-en>Papers</span></a>
-    <a href="https://chain.specul.com/" aria-current="page"><span class="ti" aria-hidden="true">◇</span><span data-zh>链</span><span data-en>Chain</span></a>
-    <a href="https://nav.specul.com/" data-nav-group="external"><span class="ti" aria-hidden="true">↗</span><span data-zh>导航</span><span data-en>Nav</span></a>
+<button aria-controls="navDrawer" aria-expanded="false" aria-label="打开菜单" class="nav-burger" type="button">
+<i></i><i></i><i></i>
+</button>
+</div>
+</header>
+<div class="nav-scrim"></div>
+<aside aria-hidden="true" aria-label="站点导航" class="nav-drawer" id="navDrawer">
+<div class="nav-drawer-h">
+<span class="brand-name"><span data-zh="">投机取巧</span><span data-en="">Speculative Speculation</span></span>
+<span class="brand-sub" data-en-sub="" data-zh-sub="Speculative Speculation">Speculative Speculation</span>
+<button aria-label="关闭" class="nav-dclose" type="button">×</button>
+</div>
+<nav class="nav-drawer-list">
+<a href="https://specul.com/"><span><span data-zh="">首页</span><span data-en="">Home</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://learn.specul.com/"><span><span data-zh="">学 AI</span><span data-en="">Learn</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://tools.specul.com/"><span><span data-zh="">工具</span><span data-en="">Tools</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://models.specul.com/"><span><span data-zh="">模型</span><span data-en="">Models</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://demos.specul.com/"><span><span data-zh="">作品演示</span><span data-en="">Playground</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://oss.specul.com/"><span><span data-zh="">开源库</span><span data-en="">OSS</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a class="nav-group-start" href="https://hardware.specul.com/"><span><span data-zh="">硬件算力</span><span data-en="">Compute</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://papers.specul.com/"><span><span data-zh="">AI 论文</span><span data-en="">AI Papers</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a aria-current="page" href="https://chain.specul.com/"><span><span data-zh="">链</span><span data-en="">Chain</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a class="nav-group-start" data-nav-group="external" href="https://nav.specul.com/"><span><span data-zh="">AI 导航</span><span data-en="">AI Directory</span></span><span aria-hidden="true" class="ar">↗</span></a>
+</nav>
+<div class="nav-drawer-foot">
+<p><span data-zh="">内容站覆盖学、用、选、跑；AI 导航是站外的 AI 网站目录，点出去看。</span><span data-en="">Content sites cover learn, use, choose and run; AI Directory is a catalogue of off-site AI sites.</span></p>
+<nav><a href="https://specul.com/legal.html"><span data-zh="">法律条款</span><span data-en="">Legal terms</span></a></nav>
+</div>
+</aside>
+<main id="main">
+<section class="u26-hero"><div class="container">
+<p class="u26-kicker"><span data-zh="">链 · 2026 增补 · 2026-11-24</span><span data-en="">Chain · 2026 additions · 2026-11-24</span></p>
+<h1 class="u26-h1"><span data-zh="">Agent 经济的五层：<br/>账户、身份、支付、卡网络、x402</span><span data-en="">Five layers under the agent economy:<br/>accounts, identity, payments, card networks, x402</span></h1>
+<p class="u26-lede"><span data-zh="">ERC-4337 解决「不改共识层也能自定义账户」；ERC-8004 解决「陌生 Agent 凭什么被信任」；AP2 解决「Agent 代付的授权证据」；Visa TAP 与 Mastercard Agent Pay 把卡组织的真实交易跑通；Algorand x402 把原子与赞助交易接进机器支付。前三条状态完全不同：成熟标准、Draft、生产未确认；卡网络已 live，但不能替代 AP2 的 mandate 层。</span><span data-en="">ERC-4337 handles custom accounts without consensus changes; ERC-8004 handles why an unknown agent is trusted; AP2 handles authorisation evidence for agent payments; Visa TAP and Mastercard Agent Pay run real card-network transactions; Algorand x402 adds atomic and sponsored transactions to machine payments. The first three have very different status — a mature standard, a Draft and unconfirmed production — while card networks are live but do not replace AP2’s mandate layer.</span></p>
+<p class="u26-note"><span data-zh="">把「已上线 / Draft / 生产未确认 / 卡网络 live / 技术接入」分开写，是本页最重要的口径。不要把「有规范」写成「已普及」，也不要把「卡网络已跑通」写成「AP2 已落地」。</span><span data-en="">Separating live / Draft / unconfirmed-production / card-network-live / technical-integration is the point of this page. Do not write “has a spec” as “widely used”, or “card networks are live” as “AP2 is deployed”.</span></p>
+</div></section>
+<section class="u26-section"><div class="container">
+<figure class="u26-figure"><svg aria-label="时间线" class="vz-svg" data-ui-aria-label-en="Timeline" data-ui-aria-label-zh="时间线" role="img" viewbox="0 0 760 258" xmlns="http://www.w3.org/2000/svg">
+<text class="vz-t-dim" text-anchor="end" x="104" y="27">2026-11-23</text>
+<line class="vz-axis" x1="120" x2="120" y1="10" y2="54"></line>
+<circle cx="120" cy="22" r="6" style="fill:var(--cat-teal)"></circle>
+<text class="vz-t-strong" x="140" y="27">Algorand x402</text>
+<text class="vz-t-dim" x="140" y="47">协议 / 支付</text>
+<text class="vz-t-dim" text-anchor="end" x="104" y="75">2026-04-28</text>
+<line class="vz-axis" x1="120" x2="120" y1="58" y2="102"></line>
+<circle cx="120" cy="70" r="6" style="fill:var(--cat-teal)"></circle>
+<text class="vz-t-strong" x="140" y="75">AP2</text>
+<text class="vz-t-dim" x="140" y="95">协议 / 支付</text>
+<text class="vz-t-dim" text-anchor="end" x="104" y="123">2026-01-29</text>
+<line class="vz-axis" x1="120" x2="120" y1="106" y2="150"></line>
+<circle cx="120" cy="118" r="6" style="fill:var(--cat-teal)"></circle>
+<text class="vz-t-strong" x="140" y="123">ERC-8004</text>
+<text class="vz-t-dim" x="140" y="143">协议 / 身份</text>
+<text class="vz-t-dim" text-anchor="end" x="104" y="171">2025-10</text>
+<line class="vz-axis" x1="120" x2="120" y1="154" y2="198"></line>
+<circle cx="120" cy="166" r="6" style="fill:var(--cat-teal)"></circle>
+<text class="vz-t-strong" x="140" y="171">Visa TAP + Mastercard Agent Pay</text>
+<text class="vz-t-dim" x="140" y="191">协议 / 卡组织</text>
+<text class="vz-t-dim" text-anchor="end" x="104" y="219">2021-09</text>
+<line class="vz-axis" x1="120" x2="120" y1="202" y2="246"></line>
+<circle cx="120" cy="214" r="6" style="fill:var(--cat-teal)"></circle>
+<text class="vz-t-strong" x="140" y="219">ERC-4337</text>
+<text class="vz-t-dim" x="140" y="239">协议 / 账户抽象</text></svg><figcaption><span data-zh="">按日期最新在上；ERC-4337 为 2021 年标准，2026 年仍是底座；TAP、Agent Pay、ERC-8004、AP2、Algorand x402 并列。</span><span data-en="">Newest first; ERC-4337 is a 2021 standard still foundational in 2026; TAP, Agent Pay, ERC-8004, AP2 and Algorand x402 sit alongside it.</span></figcaption></figure>
+<div class="u26-grid"><article class="u26-card" id="algorand-x402">
+<div class="u26-meta"><span class="u26-badge">2026-11-23</span><span class="u26-tag"><span data-zh="">协议 / 支付</span><span data-en="">Protocol / payments</span></span></div>
+<h2><span data-zh="">Algorand x402：原子交易 + 赞助交易</span><span data-en="">Algorand x402: atomic and sponsored transactions</span></h2>
+<p class="u26-p"><span data-zh="">Algorand 把 x402 的支持从 2 月的技术接入推进到原子交易与赞助交易：多个动作可作为一组交易同时成功或同时失败；facilitator / 服务方可以代付网络费，实现 gasless 支付流。x402 用 CAIP-2 标识网络，Algorand 主网 USDC 为默认资产之一。</span><span data-en="">Algorand has extended its x402 support from the February technical integration to atomic and sponsored transactions: multiple actions settle together or fail together; a facilitator or service can cover network fees for gasless payment flows. x402 uses CAIP-2 network identifiers, with Algorand mainnet USDC among the default assets.</span></p>
+<dl class="u26-dl"><dt><span data-zh="">网络</span><span data-en="">network</span></dt><dd>Algorand Mainnet / Testnet（CAIP-2）</dd><dt><span data-zh="">默认资产</span><span data-en="">asset</span></dt><dd>USDC（ASA 31566704）</dd><dt><span data-zh="">原子交易</span><span data-en="">atomic</span></dt><dd>分组交易全成或全败</dd><dt><span data-zh="">赞助</span><span data-en="">sponsored</span></dt><dd>facilitator 代付网络费</dd><dt><span data-zh="">状态</span><span data-en="">status</span></dt><dd>技术接入已上线；交易量未披露</dd></dl>
+<div class="u26-block"><b><span data-zh="">为什么值得看</span><span data-en="">Why it matters</span></b><p><span data-zh="">Agent 支付的难点不是「能付」，而是「付款、授权与用量记录要么一起成立、要么一起回滚」。Algorand 的原生原子分组把这三步压进一个结算单元；赞助交易则让没有 ALGO 的 Agent 也能先付款。对做按次 API、MCP 付费工具与机器对机器结算的人，这是 x402 多链化里值得看的一步。</span><span data-en="">The hard part of agent payments is not “can pay” but making payment, authorisation and usage accounting either all hold or all roll back. Algorand’s native atomic grouping puts them into one settlement unit; sponsored transactions let an agent without ALGO pay first. For pay-per-call APIs, paid MCP tools and M2M settlement, it is a notable step in x402’s multi-chain expansion.</span></p></div>
+<div class="u26-block u26-boundary"><b><span data-zh="">边界 / 它没主张什么</span><span data-en="">Boundary / what it does not claim</span></b><p><span data-zh="">原子分组是 Algorand 账本能力，不是 x402 新增的跨链标准；赞助交易仍由 facilitator 承担信用与合规风险。官方页面没有披露真实交易量、失败率或商户数，2026-11-23 的报道是二手来源。它没主张「x402 已在 Algorand 大规模生产」或「原子交易消除支付纠纷」。</span><span data-en="">Atomic grouping is an Algorand ledger capability, not a new cross-chain x402 standard; sponsored transactions still leave credit and compliance risk with the facilitator. Official pages disclose no live volume, failure rate or merchant count, and the 2026-11-23 report is secondary. It does not claim x402 is at large-scale production on Algorand, or that atomic transactions eliminate payment disputes.</span></p></div>
+<p class="u26-src"><span data-zh="">来源</span><span data-en="">Sources</span>：<a href="https://algorand.co/agentic-commerce/x402" rel="noopener" target="_blank"><span data-zh="">Algorand x402 官方页</span><span data-en="">Algorand x402 official page</span></a> · <a href="https://algorand.co/agentic-commerce/x402/developers" rel="noopener" target="_blank"><span data-zh="">Algorand x402 开发者页</span><span data-en="">Algorand x402 developers</span></a> · <a href="https://coinmarketcap.com/community/articles/69f4ac0a7f48160f05edf0c4/" rel="noopener" target="_blank"><span data-zh="">CoinMarketCap 报道（2026-11-23）</span><span data-en="">CoinMarketCap report (2026-11-23)</span></a></p>
+</article><article class="u26-card" id="ap2">
+<div class="u26-meta"><span class="u26-badge">2026-04-28</span><span class="u26-tag"><span data-zh="">协议 / 支付</span><span data-en="">Protocol / payments</span></span></div>
+<h2><span data-zh="">AP2：v0.2 + 捐给 FIDO Alliance</span><span data-en="">AP2: v0.2 and donation to the FIDO Alliance</span></h2>
+<p class="u26-p"><span data-zh="">Google 把 Agent Payments Protocol 捐给 FIDO，同时发布 v0.2，新增 Human Not Present 自主支付；Checkout / Payment 两类 mandate，open / closed 两种，SD-JWT 签名。</span><span data-en="">Google donated AP2 to FIDO and released v0.2 with Human Not Present autonomous payments; Checkout / Payment mandates, each open or closed, signed with SD-JWT.</span></p>
+<dl class="u26-dl"><dt><span data-zh="">提出</span><span data-en="">introduced</span></dt><dd>2025-09</dd><dt><span data-zh="">v0.2</span><span data-en="">v0.2</span></dt><dd>2026-04-28</dd><dt><span data-zh="">治理</span><span data-en="">governance</span></dt><dd>FIDO Alliance</dd><dt><span data-zh="">生产</span><span data-en="">production</span></dt><dd>截至 2026-10 未确认</dd></dl>
+<div class="u26-block"><b><span data-zh="">为什么值得看</span><span data-en="">Why it matters</span></b><p><span data-zh="">它把「Agent 代付」的授权范围写成可验证的 mandate，而不是传一张卡号；对做 Agent 结账、订阅与争议处理的团队，这是必须理解的协议层。</span><span data-en="">It writes the scope of agent payment authorisation into verifiable mandates instead of passing a card number; for agent checkout, subscriptions and disputes, it is a required protocol layer.</span></p></div>
+<div class="u26-block u26-boundary"><b><span data-zh="">边界 / 它没主张什么</span><span data-en="">Boundary / what it does not claim</span></b><p><span data-zh="">截至 2026-10 没有公开确认的生产交易；v0.2 只经历两个版本；AP2 不做 checkout / 目录 / 结算，要嵌在 UCP 等商业协议里；FIDO 接管刚开始。它没主张「已大规模落地」或「Agent 可无条件扣款」。</span><span data-en="">No publicly confirmed production transaction as of October 2026; v0.2 is only the second release; AP2 does no checkout, catalogue or settlement and must sit inside UCP or another commerce protocol; FIDO stewardship just began. It does not claim scale, or unconditional agent charging.</span></p></div>
+<p class="u26-src"><span data-zh="">来源</span><span data-en="">Sources</span>：<a href="https://blog.google/products-and-platforms/platforms/google-pay/agent-payments-protocol-fido-alliance/" rel="noopener" target="_blank"><span data-zh="">Google 博客</span><span data-en="">Google blog</span></a> · <a href="https://ap2-protocol.org/faq/" rel="noopener" target="_blank"><span data-zh="">AP2 FAQ</span><span data-en="">AP2 FAQ</span></a></p>
+</article><article class="u26-card" id="erc-8004">
+<div class="u26-meta"><span class="u26-badge">2026-01-29</span><span class="u26-tag"><span data-zh="">协议 / 身份</span><span data-en="">Protocol / identity</span></span></div>
+<h2><span data-zh="">ERC-8004：Trustless Agents 上主网</span><span data-en="">ERC-8004: Trustless Agents goes mainnet</span></h2>
+<p class="u26-p"><span data-zh="">三套 singleton registry：Identity（ERC-721 + agent card JSON，含 A2A / MCP 端点）、Reputation、Validation；与 x402 支付集成；仍是 Draft，v2 在开发。</span><span data-en="">Three singleton registries: Identity (ERC-721 + agent-card JSON with A2A / MCP endpoints), Reputation and Validation; integrates with x402 payments; still Draft, with v2 in development.</span></p>
+<dl class="u26-dl"><dt><span data-zh="">上线</span><span data-en="">mainnet</span></dt><dd>2026-01-29</dd><dt><span data-zh="">注册表</span><span data-en="">registries</span></dt><dd>Identity / Reputation / Validation</dd><dt><span data-zh="">支付</span><span data-en="">payments</span></dt><dd>x402</dd><dt><span data-zh="">状态</span><span data-en="">status</span></dt><dd>Draft；v2 开发中</dd></dl>
+<div class="u26-block"><b><span data-zh="">为什么值得看</span><span data-en="">Why it matters</span></b><p><span data-zh="">它把「陌生 Agent 凭什么被信任」拆成可查询的三层，而不是一句「上链即可信」。对做 Agent 市场、跨组织委派与支付的人，这是 2026 年最值得先读的协议。</span><span data-en="">It splits “why trust an unknown agent” into three queryable layers instead of “on-chain means trust”. For agent marketplaces, cross-org delegation and payments, it is the first 2026 protocol to read.</span></p></div>
+<div class="u26-block u26-boundary"><b><span data-zh="">边界 / 它没主张什么</span><span data-en="">Boundary / what it does not claim</span></b><p><span data-zh="">声誉可被女巫/刷分；验证是可插拔，不是默认开启；注册只证明条目存在，不证明能力或合法性；跨链注册是自声明。它没主张「所有 Agent 都必须注册」或「注册即可信」。</span><span data-en="">Reputation can be sybil-attacked or farmed; validation is pluggable, not on by default; registration proves an entry exists, not capability or legality; cross-chain registrations are self-declared. It does not claim every agent must register, or that registration equals trust.</span></p></div>
+<p class="u26-src"><span data-zh="">来源</span><span data-en="">Sources</span>：<a href="https://www.8004.org/blog/welcome-to-8004" rel="noopener" target="_blank"><span data-zh="">8004 官方博客</span><span data-en="">8004 official blog</span></a> · <a href="https://www.8004.org/learn" rel="noopener" target="_blank"><span data-zh="">8004 学习页</span><span data-en="">8004 learn</span></a></p>
+</article><article class="u26-card" id="visa-mastercard-agent-payments">
+<div class="u26-meta"><span class="u26-badge">2025-10</span><span class="u26-tag"><span data-zh="">协议 / 卡组织</span><span data-en="">Protocol / card networks</span></span></div>
+<h2><span data-zh="">Visa TAP + Mastercard Agent Pay：卡组织把 Agent 支付跑进真实商户</span><span data-en="">Visa TAP + Mastercard Agent Pay: card networks put agent payments into live merchants</span></h2>
+<p class="u26-p"><span data-zh="">Visa 2025-10-14 发布 TAP，用 Web Bot Auth 的 HTTP 签名让商户区分「浏览」与「支付」，2026-07 在欧洲 30+ 发卡行与 lastminute.com 等商户跑通；2026-10 BILL + Billtrust 用 TAP 完成 B2B 发票支付 pilot。Mastercard Agent Pay 用 KYA 注册、每个 agent 独立 Agentic Token、Payment Passkeys 与 Verifiable Intent，2025 美国上线，2026 在新加坡、亚太与拉美多市场 live。</span><span data-en="">Visa released TAP on 14 October 2025: Web Bot Auth HTTP signatures let merchants distinguish browsing from paying, with live European purchases across 30+ issuers and merchants such as lastminute.com in July 2026, and a BILL + Billtrust B2B invoice-payment pilot in October 2026. Mastercard Agent Pay combines KYA registration, a unique Agentic Token per agent, Payment Passkeys and Verifiable Intent; it launched in the US in 2025 and went live across Singapore, Asia-Pacific and Latin America in 2026.</span></p>
+<dl class="u26-dl"><dt><span data-zh="">发布</span><span data-en="">launch</span></dt><dd>TAP 2025-10-14；Agent Pay 2025</dd><dt><span data-zh="">身份</span><span data-en="">identity</span></dt><dd>TAP HTTP 签名 + Agentic Directory；Mastercard KYA</dd><dt><span data-zh="">授权</span><span data-en="">auth</span></dt><dd>Visa token + 用户限额；Mastercard Passkeys + 预授权</dd><dt><span data-zh="">状态</span><span data-en="">status</span></dt><dd>2026 真实交易 / live pilots</dd><dt><span data-zh="">结算</span><span data-en="">settlement</span></dt><dd>卡网络，不是链上结算</dd></dl>
+<div class="u26-block"><b><span data-zh="">为什么值得看</span><span data-en="">Why it matters</span></b><p><span data-zh="">补上链站缺的一层：Agent 支付不只在链上，卡组织已经用签名、token 与生物识别把真实交易跑通。对照 AP2 的 mandate 层，能看清谁在做授权、谁在做结算、谁只是规范。</span><span data-en="">It fills a missing layer: agent payments are not only on-chain. Card networks already run real transactions with signatures, tokens and biometrics. Compared with AP2’s mandate layer, it shows who authorises, who settles and who only has a spec.</span></p></div>
+<div class="u26-block u26-boundary"><b><span data-zh="">边界 / 它没主张什么</span><span data-en="">Boundary / what it does not claim</span></b><p><span data-zh="">TAP 与 Agent Pay 不是同一标准，也不能互相替代；它们依赖卡网络与发卡行，退款、争议与拒付仍在既有卡规则里。AP2 截至 2026-10 仍没有公开确认的生产交易；把「卡网络已 live」写成「AP2 已普及」是混层。</span><span data-en="">TAP and Agent Pay are different standards and cannot substitute for each other; they depend on card networks and issuers, and refunds, disputes and chargebacks stay under existing card rules. AP2 still has no publicly confirmed production transaction as of October 2026; writing “card networks are live” as “AP2 is everywhere” conflates layers.</span></p></div>
+<p class="u26-src"><span data-zh="">来源</span><span data-en="">Sources</span>：<a href="https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.21716.html?categoryid=2826687" rel="noopener" target="_blank"><span data-zh="">Visa TAP 发布</span><span data-en="">Visa TAP launch</span></a> · <a href="https://www.visa.co.uk/about-visa/newsroom/press-releases.3457328.html" rel="noopener" target="_blank"><span data-zh="">Visa 欧洲 live</span><span data-en="">Visa Europe live</span></a> · <a href="https://investor.visa.com/news/news-details/2026/Visa-BILL-and-Billtrust-Launch-First-Live-Pilot-for-Trusted-AI-Agent-Payments-Between-Buyer-and-Supplier-Platforms/default.aspx" rel="noopener" target="_blank"><span data-zh="">BILL + Billtrust pilot</span><span data-en="">BILL + Billtrust pilot</span></a> · <a href="https://www.mastercard.com/news/ap/en/newsroom/press-releases/en/2026/mastercard-delivers-its-first-live-agentic-transaction-in-singapore-with-dbs-and-uob" rel="noopener" target="_blank"><span data-zh="">Mastercard Agent Pay</span><span data-en="">Mastercard Agent Pay</span></a> · <a href="https://www.mastercard.com/europe/en/news-and-trends/stories/2026/agentic-commerce-identity-know-your-agent.html" rel="noopener" target="_blank"><span data-zh="">Mastercard Trust Framework</span><span data-en="">Mastercard Trust Framework</span></a></p>
+</article><article class="u26-card" id="erc-4337">
+<div class="u26-meta"><span class="u26-badge">2021-09</span><span class="u26-tag"><span data-zh="">协议 / 账户抽象</span><span data-en="">Protocol / account abstraction</span></span></div>
+<h2><span data-zh="">ERC-4337：不改共识层的账户抽象</span><span data-en="">ERC-4337: account abstraction without consensus changes</span></h2>
+<p class="u26-p"><span data-zh="">UserOperation + 独立 mempool + Bundler + EntryPoint + Paymaster；用户意图不进共识层，也能做自定义签名、批量操作与代付 gas。</span><span data-en="">UserOperation + a separate mempool + Bundler + EntryPoint + Paymaster; custom signatures, batching and sponsored gas without touching the consensus layer.</span></p>
+<dl class="u26-dl"><dt><span data-zh="">提出</span><span data-en="">created</span></dt><dd>2021-09-29</dd><dt><span data-zh="">核心</span><span data-en="">object</span></dt><dd>UserOperation</dd><dt><span data-zh="">角色</span><span data-en="">roles</span></dt><dd>EntryPoint / Bundler / Paymaster</dd><dt><span data-zh="">状态</span><span data-en="">status</span></dt><dd>ERC Review</dd></dl>
+<div class="u26-block"><b><span data-zh="">为什么值得看</span><span data-en="">Why it matters</span></b><p><span data-zh="">它是「Agent 钱包」与「代付」绕不开的底座；理解 alt mempool 与 Paymaster，才能判断一个 Agent 支付方案是真的链上执行，还是只做了一个托管账户。</span><span data-en="">It is the base that “agent wallets” and sponsorship cannot avoid; understanding the alt mempool and Paymaster is how you tell real on-chain execution from a custodial account.</span></p></div>
+<div class="u26-block u26-boundary"><b><span data-zh="">边界 / 它没主张什么</span><span data-en="">Boundary / what it does not claim</span></b><p><span data-zh="">alt mempool 带来 bundler 中心化与审查风险；Paymaster 赞助可被滥用；不同 EntryPoint 版本兼容性要单独确认；不改共识层也意味着底层仍是 EOA + 合约。它没主张「保证 gasless」或「唯一 AA 路线」。</span><span data-en="">The alt mempool brings bundler centralisation and censorship risk; Paymaster sponsorship can be abused; EntryPoint versions need separate compatibility checks; avoiding consensus changes leaves EOA + contract underneath. It does not claim guaranteed gasless transactions or the only AA route.</span></p></div>
+<p class="u26-src"><span data-zh="">来源</span><span data-en="">Sources</span>：<a href="https://eips-wg.github.io/EIPs/4337/" rel="noopener" target="_blank"><span data-zh="">EIP-4337 规范</span><span data-en="">EIP-4337 spec</span></a> · <a href="https://docs.erc4337.io/core-standards/erc-4337" rel="noopener" target="_blank"><span data-zh="">ERC-4337 文档</span><span data-en="">ERC-4337 docs</span></a></p>
+</article></div>
+<p class="u26-note"><b><span data-zh="">下一步</span><span data-en="">Next</span>：</b><a href="https://chain.specul.com/"><span data-zh="">回到链站看全部条目</span><span data-en="">Back to all chain entries</span> →</a></p>
+</div></section>
+</main>
+<footer class="site-footer foot-single">
+<div class="container foot-line">
+<div class="foot-brand">
+<span class="foot-brand-main">
+<span aria-hidden="true" class="brand-dot"></span>
+<span class="foot-copy"><span data-zh="">投机取巧 · specul.com</span><span data-en="">Specul · specul.com</span></span>
+</span>
+<span class="foot-license"><a href="https://specul.com/LICENSE-CONTENT.txt"><span data-zh="">内容 CC BY 4.0</span><span data-en="">Content CC BY 4.0</span></a><span aria-hidden="true" class="sep">·</span><a href="https://specul.com/LICENSE.txt"><span data-zh="">代码 MIT</span><span data-en="">Code MIT</span></a><span aria-hidden="true" class="sep">·</span><a class="foot-source" href="https://github.com/speculcom/ai-handbook" rel="noopener" target="_blank"><span data-zh="">源码</span><span data-en="">Source</span></a></span>
+</div>
+<nav aria-label="Footer site links" class="foot-sites">
+<a class="site-link" href="https://specul.com/"><span data-zh="">首页</span><span data-en="">Home</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://learn.specul.com/"><span data-zh="">学 AI</span><span data-en="">Learn</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://tools.specul.com/"><span data-zh="">工具</span><span data-en="">Tools</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://models.specul.com/"><span data-zh="">模型</span><span data-en="">Models</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://demos.specul.com/"><span data-zh="">演示</span><span data-en="">Demos</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://oss.specul.com/"><span data-zh="">开源</span><span data-en="">OSS</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://hardware.specul.com/"><span data-zh="">算力</span><span data-en="">Compute</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://papers.specul.com/"><span data-zh="">论文</span><span data-en="">Papers</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://chain.specul.com/"><span data-zh="">链</span><span data-en="">Chain</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://nav.specul.com/"><span data-zh="">导航</span><span data-en="">Directory</span></a>
+</nav>
+<nav aria-label="Legal and corrections" class="foot-legal">
+<a href="https://specul.com/legal.html"><span data-zh="">法律</span><span data-en="">Legal</span></a><span aria-hidden="true" class="sep">·</span>
+<a href="https://specul.com/legal.html#s8"><span data-zh="">隐私</span><span data-en="">Privacy</span></a><span aria-hidden="true" class="sep">·</span>
+<a href="https://specul.com/correct.html"><span data-zh="">纠错</span><span data-en="">Corrections</span></a>
+</nav>
+</div>
+</footer>
+<nav aria-label="快捷导航" class="nav-tabbar nav-tabbar-1row">
+<a href="https://specul.com/"><span aria-hidden="true" class="ti">◎</span><span data-zh="">首页</span><span data-en="">Home</span></a>
+<a href="https://learn.specul.com/"><span aria-hidden="true" class="ti">▤</span><span data-zh="">学AI</span><span data-en="">Learn</span></a>
+<a href="https://tools.specul.com/"><span aria-hidden="true" class="ti">◈</span><span data-zh="">工具</span><span data-en="">Tools</span></a>
+<a href="https://models.specul.com/"><span aria-hidden="true" class="ti">▦</span><span data-zh="">模型</span><span data-en="">Models</span></a>
+<a href="https://demos.specul.com/"><span aria-hidden="true" class="ti">▷</span><span data-zh="">演示</span><span data-en="">Demos</span></a>
+<a href="https://oss.specul.com/"><span aria-hidden="true" class="ti">▧</span><span data-zh="">开源</span><span data-en="">OSS</span></a>
+<a href="https://hardware.specul.com/"><span aria-hidden="true" class="ti">▣</span><span data-zh="">算力</span><span data-en="">Chips</span></a>
+<a href="https://papers.specul.com/"><span aria-hidden="true" class="ti">▥</span><span data-zh="">论文</span><span data-en="">Papers</span></a>
+<a aria-current="page" href="https://chain.specul.com/"><span aria-hidden="true" class="ti">◇</span><span data-zh="">链</span><span data-en="">Chain</span></a>
+<a data-nav-group="external" href="https://nav.specul.com/"><span aria-hidden="true" class="ti">↗</span><span data-zh="">导航</span><span data-en="">Nav</span></a>
 </nav>
 </body>
 </html>

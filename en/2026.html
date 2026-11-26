@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html data-lang="en" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Five layers under the agent economy: accounts, identity…</title>
+<meta content="ERC-4337 handles custom accounts without consensus changes; ERC-8004 handles why an unknown agent is trusted; AP2 handles authorisation evidence for…" name="description"/>
+<link href="https://chain.specul.com/en/2026.html" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="Chain" property="og:site_name"/>
+<meta content="https://chain.specul.com/en/2026.html" property="og:url"/>
+<meta content="Five layers under the agent economy: accounts, identity…" property="og:title"/>
+<meta content="ERC-4337 handles custom accounts without consensus changes; ERC-8004 handles why an unknown agent is trusted; AP2 handles authorisation evidence for…" property="og:description"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="zh_CN" property="og:locale:alternate"/>
+<meta content="#16121f" name="theme-color"/>
+<link href="/assets/brand/dandelion-favicon-site.png" rel="icon" type="image/png"/>
+<link href="/assets/brand/dandelion-apple-touch-site.png" rel="apple-touch-icon"/>
+<script src="/brand.js"></script>
+<link href="/brand.css" rel="stylesheet"/>
+<link href="/site.css" rel="stylesheet"/>
+<style>
+.u26-hero{padding:24px 0 14px}
+.u26-kicker{margin:0 0 8px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);font-weight:650}
+.u26-h1{margin:0;max-width:20ch;font-size:clamp(30px,4.3vw,52px);line-height:1.1;letter-spacing:-.03em;color:var(--ink)}
+.u26-lede{margin:12px 0 0;max-width:70ch;font-size:15px;line-height:1.62;color:var(--ink-mid)}
+.u26-note{margin:12px 0 0;max-width:72ch;padding:10px 12px;border-left:2px solid var(--cyan);background:var(--brand-soft);font-size:13px;line-height:1.6;color:var(--ink-mid)}
+.u26-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.u26-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--ink-mid);background:var(--bg-panel)}
+.u26-chip b{color:var(--cyan);font-variant-numeric:tabular-nums}
+.u26-section{padding:24px 0;border-top:1px solid var(--line)}
+.u26-h2{margin:0 0 6px;font-size:clamp(22px,2.8vw,32px);line-height:1.2;color:var(--ink)}
+.u26-sub{margin:0 0 12px;font-size:13px;line-height:1.6;color:var(--ink-faint);max-width:68ch}
+.u26-figure{margin:0 0 14px;padding:12px 12px 8px;border:1px solid var(--line);border-radius:14px;background:var(--bg-panel)}
+.u26-figure figcaption{margin-top:6px;font-size:11px;line-height:1.5;color:var(--ink-faint)}
+.u26-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:10px}
+.u26-card{grid-column:span 6;min-width:0;padding:14px 14px 12px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,var(--bg-panel),var(--bg-inset))}
+.u26-card.wide{grid-column:span 12}
+.u26-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px}
+.u26-badge{display:inline-flex;align-items:center;padding:3px 8px;border-radius:6px;border:1px solid var(--brand-line);background:var(--brand-soft);color:var(--cyan);font-size:11px;font-variant-numeric:tabular-nums}
+.u26-tag{font-size:11px;color:var(--ink-faint)}
+.u26-card h2{margin:0 0 6px;font-size:17px;line-height:1.3;color:var(--ink)}
+.u26-card .u26-p{margin:0;font-size:13px;line-height:1.62;color:var(--ink-mid)}
+.u26-dl{display:grid;grid-template-columns:auto 1fr;gap:5px 10px;margin:10px 0 0;padding:8px 0 2px;border-top:1px dashed var(--line);font-size:12px;line-height:1.5}
+.u26-dl dt{color:var(--ink-faint)}
+.u26-dl dd{margin:0;color:var(--ink)}
+.u26-block{margin-top:9px;padding-top:7px;border-top:1px dashed var(--line)}
+.u26-block b{display:block;margin-bottom:3px;font-size:11px;letter-spacing:.04em;color:var(--cyan)}
+.u26-block p{margin:0;font-size:12px;line-height:1.6;color:var(--ink-mid)}
+.u26-boundary{border-left:2px solid var(--warn);padding-left:9px}
+.u26-src{margin:10px 0 0;font-size:11px;line-height:1.6;color:var(--ink-faint);overflow-wrap:anywhere}
+.u26-src a{color:var(--ink-mid);text-decoration:none;border-bottom:1px solid var(--line)}
+.u26-brief{display:grid;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--bg-panel)}
+.u26-row{display:grid;grid-template-columns:82px 1fr auto;gap:10px;align-items:start;padding:10px 12px;border-bottom:1px solid var(--line)}
+.u26-row:last-child{border-bottom:0}
+.u26-row time{font-size:11px;color:var(--cyan);font-variant-numeric:tabular-nums;padding-top:2px}
+.u26-row b{display:block;font-size:14px;line-height:1.4;color:var(--ink)}
+.u26-row p{margin:3px 0 0;font-size:12px;line-height:1.55;color:var(--ink-mid)}
+.u26-row a{font-size:11px;color:var(--ink-faint);text-decoration:none;white-space:nowrap}
+.u26-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.u26-two .u26-card{grid-column:auto}
+.u26-quote{margin:10px 0 0;padding:9px 10px;border-left:2px solid var(--brand-line);background:var(--bg-inset);font-size:12px;line-height:1.6;color:var(--ink-mid);overflow-wrap:anywhere}
+.u26-list{display:grid;gap:6px;margin:10px 0 0}
+.u26-list div{display:grid;grid-template-columns:26px 1fr;gap:8px;font-size:12px;line-height:1.55;color:var(--ink-mid)}
+.u26-list b{color:var(--cyan);font-variant-numeric:tabular-nums}
+.u26-map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:2px 0 14px}
+.u26-lane{padding:12px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,var(--bg-panel),var(--bg-inset))}
+.u26-lane>b{display:block;font-size:12px;letter-spacing:.06em;color:var(--cyan)}
+.u26-lane>span{display:block;margin:3px 0 9px;font-size:11px;line-height:1.5;color:var(--ink-faint)}
+.u26-lane a{display:grid;grid-template-columns:48px 1fr;gap:8px;padding:6px 0;border-top:1px dashed var(--line);font-size:11px;line-height:1.5;color:var(--ink-mid)}
+.u26-lane a time{color:var(--ink-faint);font-variant-numeric:tabular-nums}
+.u26-lane a:hover{color:var(--ink)}
+.u26-chain{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 14px;counter-reset:step}
+.u26-chain div{position:relative;padding:11px 10px 10px;border:1px solid var(--line);border-radius:12px;background:var(--bg-panel)}
+.u26-chain div:not(:last-child)::after{content:"→";position:absolute;right:-11px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--ink-faint)}
+.u26-chain b{display:block;font-size:11px;letter-spacing:.05em;color:var(--cyan)}
+.u26-chain span{display:block;margin-top:4px;font-size:13px;line-height:1.4;color:var(--ink)}
+.nf-grid{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:clamp(24px,5vw,56px);align-items:center}
+.nf-art{opacity:.95}
+.nf-art svg{display:block;width:100%;height:auto}
+@media(max-width:900px){.u26-card{grid-column:span 12}.u26-two{grid-template-columns:1fr}.u26-row{grid-template-columns:70px 1fr}.u26-row a{display:none}.u26-map{grid-template-columns:1fr}.u26-chain{grid-template-columns:1fr 1fr}.u26-chain div:nth-child(2)::after{content:none}.nf-grid{grid-template-columns:1fr}.nf-art{max-width:200px;margin:8px auto 0}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Five layers under the agent economy: accounts, identity…","description":"ERC-4337 handles custom accounts without consensus changes; ERC-8004 handles why an unknown agent is trusted; AP2 handles authorisation evidence for…","url":"https://chain.specul.com/en/2026.html","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://chain.specul.com/en/2026.html"}}</script>
+<meta content="Five layers under the agent economy: accounts, identity…" name="twitter:title"/><meta content="ERC-4337 handles custom accounts without consensus changes; ERC-8004 handles why an unknown agent is trusted; AP2 handles authorisation evidence for…" name="twitter:description"/><link href="https://chain.specul.com/2026.html" hreflang="zh-CN" rel="alternate"/><link href="https://chain.specul.com/en/2026.html" hreflang="en" rel="alternate"/><link href="https://chain.specul.com/2026.html" hreflang="x-default" rel="alternate"/></head>
+<!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
+     同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
+     而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）
+     完全无效：vg 的引擎名在亮色主题下一直是 1.62:1 的金色，就是因为这条内联。
+     现在只保留头部那一处 —— 单一真相源，且可被主题覆盖。
+     ⚠ 这段注释里**不能出现反引号**：它在模板字符串内部，反引号会提前结束模板
+     （写这段时踩了第 4 次；pitfalls 里早有记录）。 -->
+<body class="brand-ambient has-tabbar has-tabbar-1row">
+<a class="t-skip" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="container site-bar">
+<a class="brand" href="https://specul.com/en/" title="投机取巧">
+<span aria-hidden="true" class="brand-dot"></span>
+<span class="brand-text">
+<span class="brand-name" id="markName">Speculative Speculation</span>
+<span class="brand-sub" id="markSub"></span>
+</span>
+</a>
+<nav aria-label="站点导航" class="nav-links">
+<a href="https://specul.com/en/">Home</a>
+<a href="https://learn.specul.com/en/">Learn</a>
+<a href="https://tools.specul.com/en/">Tools</a>
+<a href="https://models.specul.com/en/">Models</a>
+<a href="https://demos.specul.com/en/">Playground</a>
+<a href="https://oss.specul.com/en/">OSS</a>
+<a href="https://hardware.specul.com/en/">Compute</a>
+<a href="https://papers.specul.com/en/">AI Papers</a>
+<a aria-current="page" href="https://chain.specul.com/en/">Chain</a>
+<a href="https://nav.specul.com/en/">AI Directory</a>
+</nav>
+<!-- 2026-10-10：.nav-tools 从 nav 元素**内部**移到外面，与 .nav-links 平级。
+           放里面时窄屏下它会跟着链接一起换行：链接占满整行 → 按钮被挤到第三条
+           （实测顶栏 134px、按钮组孤零零一行）。移出来后它与品牌同行，
+           链接独占第二行居中 —— 这才是下面注释里方案 B 想要的样子。 -->
+<span class="nav-tools">
+<a aria-label="Search" class="icon-btn" href="https://specul.com/en/search.html" title="Search all sites"><span aria-hidden="true">⌕</span></a>
+<button aria-label="切换明暗主题" class="icon-btn" id="themeBtn" title="切换明暗主题" type="button">☾</button>
+<a aria-label="切换到中文" class="icon-btn" href="/2026.html" hreflang="zh-CN" id="langBtn" lang="zh-CN" title="切换到中文">中文</a>
+</span>
+<!-- B6（2026-10-09）：窄屏（≤900px）下 .nav-links 会隐藏，这个汉堡是替代入口。
+           行为在共享 brand.js 里（一处实现、十站共用），样式在共享 brand.css。
+           无脚本时 CSS 不会显示它，而是把 .nav-links 在窄屏放出来 —— 不会出现
+           「导航被藏进一个点了没反应的按钮」。 -->
+<button aria-controls="navDrawer" aria-expanded="false" aria-label="打开菜单" class="nav-burger" type="button">
+<i></i><i></i><i></i>
+</button>
+</div>
+</header>
+<div class="nav-scrim"></div>
+<aside aria-hidden="true" aria-label="站点导航" class="nav-drawer" id="navDrawer">
+<div class="nav-drawer-h">
+<span class="brand-name">Speculative Speculation</span>
+<span class="brand-sub"></span>
+<button aria-label="关闭" class="nav-dclose" type="button">×</button>
+</div>
+<nav class="nav-drawer-list">
+<a href="https://specul.com/en/"><span>Home</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://learn.specul.com/en/"><span>Learn</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://tools.specul.com/en/"><span>Tools</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://models.specul.com/en/"><span>Models</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://demos.specul.com/en/"><span>Playground</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://oss.specul.com/en/"><span>OSS</span><span aria-hidden="true" class="ar">→</span></a>
+<a class="nav-group-start" href="https://hardware.specul.com/en/"><span>Compute</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://papers.specul.com/en/"><span>AI Papers</span><span aria-hidden="true" class="ar">→</span></a>
+<a aria-current="page" href="https://chain.specul.com/en/"><span>Chain</span><span aria-hidden="true" class="ar">→</span></a>
+<a class="nav-group-start" data-nav-group="external" href="https://nav.specul.com/en/"><span>AI Directory</span><span aria-hidden="true" class="ar">↗</span></a>
+</nav>
+<div class="nav-drawer-foot">
+<p>Content sites cover learn, use, choose and run; AI Directory is a catalogue of off-site AI sites.</p>
+<nav><a href="https://specul.com/en/legal.html">Legal terms</a></nav>
+</div>
+</aside>
+<main id="main">
+<section class="u26-hero"><div class="container">
+<p class="u26-kicker">Chain · 2026 additions · 2026-11-24</p>
+<h1 class="u26-h1">Five layers under the agent economy:<br/>accounts, identity, payments, card networks, x402</h1>
+<p class="u26-lede">ERC-4337 handles custom accounts without consensus changes; ERC-8004 handles why an unknown agent is trusted; AP2 handles authorisation evidence for agent payments; Visa TAP and Mastercard Agent Pay run real card-network transactions; Algorand x402 adds atomic and sponsored transactions to machine payments. The first three have very different status — a mature standard, a Draft and unconfirmed production — while card networks are live but do not replace AP2’s mandate layer.</p>
+<p class="u26-note">Separating live / Draft / unconfirmed-production / card-network-live / technical-integration is the point of this page. Do not write “has a spec” as “widely used”, or “card networks are live” as “AP2 is deployed”.</p>
+</div></section>
+<section class="u26-section"><div class="container">
+<figure class="u26-figure"><svg aria-label="Timeline" class="vz-svg" role="img" viewbox="0 0 760 258" xmlns="http://www.w3.org/2000/svg">
+<text class="vz-t-dim" text-anchor="end" x="104" y="27">2026-11-23</text>
+<line class="vz-axis" x1="120" x2="120" y1="10" y2="54"></line>
+<circle cx="120" cy="22" r="6" style="fill:var(--cat-teal)"></circle>
+<text class="vz-t-strong" x="140" y="27">Algorand x402</text>
+<text class="vz-t-dim" x="140" y="47">协议 / 支付</text>
+<text class="vz-t-dim" text-anchor="end" x="104" y="75">2026-04-28</text>
+<line class="vz-axis" x1="120" x2="120" y1="58" y2="102"></line>
+<circle cx="120" cy="70" r="6" style="fill:var(--cat-teal)"></circle>
+<text class="vz-t-strong" x="140" y="75">AP2</text>
+<text class="vz-t-dim" x="140" y="95">协议 / 支付</text>
+<text class="vz-t-dim" text-anchor="end" x="104" y="123">2026-01-29</text>
+<line class="vz-axis" x1="120" x2="120" y1="106" y2="150"></line>
+<circle cx="120" cy="118" r="6" style="fill:var(--cat-teal)"></circle>
+<text class="vz-t-strong" x="140" y="123">ERC-8004</text>
+<text class="vz-t-dim" x="140" y="143">协议 / 身份</text>
+<text class="vz-t-dim" text-anchor="end" x="104" y="171">2025-10</text>
+<line class="vz-axis" x1="120" x2="120" y1="154" y2="198"></line>
+<circle cx="120" cy="166" r="6" style="fill:var(--cat-teal)"></circle>
+<text class="vz-t-strong" x="140" y="171">Visa TAP + Mastercard Agent Pay</text>
+<text class="vz-t-dim" x="140" y="191">协议 / 卡组织</text>
+<text class="vz-t-dim" text-anchor="end" x="104" y="219">2021-09</text>
+<line class="vz-axis" x1="120" x2="120" y1="202" y2="246"></line>
+<circle cx="120" cy="214" r="6" style="fill:var(--cat-teal)"></circle>
+<text class="vz-t-strong" x="140" y="219">ERC-4337</text>
+<text class="vz-t-dim" x="140" y="239">协议 / 账户抽象</text></svg><figcaption>Newest first; ERC-4337 is a 2021 standard still foundational in 2026; TAP, Agent Pay, ERC-8004, AP2 and Algorand x402 sit alongside it.</figcaption></figure>
+<div class="u26-grid"><article class="u26-card" id="algorand-x402">
+<div class="u26-meta"><span class="u26-badge">2026-11-23</span><span class="u26-tag">Protocol / payments</span></div>
+<h2>Algorand x402: atomic and sponsored transactions</h2>
+<p class="u26-p">Algorand has extended its x402 support from the February technical integration to atomic and sponsored transactions: multiple actions settle together or fail together; a facilitator or service can cover network fees for gasless payment flows. x402 uses CAIP-2 network identifiers, with Algorand mainnet USDC among the default assets.</p>
+<dl class="u26-dl"><dt>network</dt><dd>Algorand Mainnet / Testnet（CAIP-2）</dd><dt>asset</dt><dd>USDC（ASA 31566704）</dd><dt>atomic</dt><dd>分组交易全成或全败</dd><dt>sponsored</dt><dd>facilitator 代付网络费</dd><dt>status</dt><dd>技术接入已上线；交易量未披露</dd></dl>
+<div class="u26-block"><b>Why it matters</b><p>The hard part of agent payments is not “can pay” but making payment, authorisation and usage accounting either all hold or all roll back. Algorand’s native atomic grouping puts them into one settlement unit; sponsored transactions let an agent without ALGO pay first. For pay-per-call APIs, paid MCP tools and M2M settlement, it is a notable step in x402’s multi-chain expansion.</p></div>
+<div class="u26-block u26-boundary"><b>Boundary / what it does not claim</b><p>Atomic grouping is an Algorand ledger capability, not a new cross-chain x402 standard; sponsored transactions still leave credit and compliance risk with the facilitator. Official pages disclose no live volume, failure rate or merchant count, and the 2026-11-23 report is secondary. It does not claim x402 is at large-scale production on Algorand, or that atomic transactions eliminate payment disputes.</p></div>
+<p class="u26-src">Sources：<a href="https://algorand.co/agentic-commerce/x402" rel="noopener" target="_blank">Algorand x402 official page</a> · <a href="https://algorand.co/agentic-commerce/x402/developers" rel="noopener" target="_blank">Algorand x402 developers</a> · <a href="https://coinmarketcap.com/community/articles/69f4ac0a7f48160f05edf0c4/" rel="noopener" target="_blank">CoinMarketCap report (2026-11-23)</a></p>
+</article><article class="u26-card" id="ap2">
+<div class="u26-meta"><span class="u26-badge">2026-04-28</span><span class="u26-tag">Protocol / payments</span></div>
+<h2>AP2: v0.2 and donation to the FIDO Alliance</h2>
+<p class="u26-p">Google donated AP2 to FIDO and released v0.2 with Human Not Present autonomous payments; Checkout / Payment mandates, each open or closed, signed with SD-JWT.</p>
+<dl class="u26-dl"><dt>introduced</dt><dd>2025-09</dd><dt>v0.2</dt><dd>2026-04-28</dd><dt>governance</dt><dd>FIDO Alliance</dd><dt>production</dt><dd>截至 2026-10 未确认</dd></dl>
+<div class="u26-block"><b>Why it matters</b><p>It writes the scope of agent payment authorisation into verifiable mandates instead of passing a card number; for agent checkout, subscriptions and disputes, it is a required protocol layer.</p></div>
+<div class="u26-block u26-boundary"><b>Boundary / what it does not claim</b><p>No publicly confirmed production transaction as of October 2026; v0.2 is only the second release; AP2 does no checkout, catalogue or settlement and must sit inside UCP or another commerce protocol; FIDO stewardship just began. It does not claim scale, or unconditional agent charging.</p></div>
+<p class="u26-src">Sources：<a href="https://blog.google/products-and-platforms/platforms/google-pay/agent-payments-protocol-fido-alliance/" rel="noopener" target="_blank">Google blog</a> · <a href="https://ap2-protocol.org/faq/" rel="noopener" target="_blank">AP2 FAQ</a></p>
+</article><article class="u26-card" id="erc-8004">
+<div class="u26-meta"><span class="u26-badge">2026-01-29</span><span class="u26-tag">Protocol / identity</span></div>
+<h2>ERC-8004: Trustless Agents goes mainnet</h2>
+<p class="u26-p">Three singleton registries: Identity (ERC-721 + agent-card JSON with A2A / MCP endpoints), Reputation and Validation; integrates with x402 payments; still Draft, with v2 in development.</p>
+<dl class="u26-dl"><dt>mainnet</dt><dd>2026-01-29</dd><dt>registries</dt><dd>Identity / Reputation / Validation</dd><dt>payments</dt><dd>x402</dd><dt>status</dt><dd>Draft；v2 开发中</dd></dl>
+<div class="u26-block"><b>Why it matters</b><p>It splits “why trust an unknown agent” into three queryable layers instead of “on-chain means trust”. For agent marketplaces, cross-org delegation and payments, it is the first 2026 protocol to read.</p></div>
+<div class="u26-block u26-boundary"><b>Boundary / what it does not claim</b><p>Reputation can be sybil-attacked or farmed; validation is pluggable, not on by default; registration proves an entry exists, not capability or legality; cross-chain registrations are self-declared. It does not claim every agent must register, or that registration equals trust.</p></div>
+<p class="u26-src">Sources：<a href="https://www.8004.org/blog/welcome-to-8004" rel="noopener" target="_blank">8004 official blog</a> · <a href="https://www.8004.org/learn" rel="noopener" target="_blank">8004 learn</a></p>
+</article><article class="u26-card" id="visa-mastercard-agent-payments">
+<div class="u26-meta"><span class="u26-badge">2025-10</span><span class="u26-tag">Protocol / card networks</span></div>
+<h2>Visa TAP + Mastercard Agent Pay: card networks put agent payments into live merchants</h2>
+<p class="u26-p">Visa released TAP on 14 October 2025: Web Bot Auth HTTP signatures let merchants distinguish browsing from paying, with live European purchases across 30+ issuers and merchants such as lastminute.com in July 2026, and a BILL + Billtrust B2B invoice-payment pilot in October 2026. Mastercard Agent Pay combines KYA registration, a unique Agentic Token per agent, Payment Passkeys and Verifiable Intent; it launched in the US in 2025 and went live across Singapore, Asia-Pacific and Latin America in 2026.</p>
+<dl class="u26-dl"><dt>launch</dt><dd>TAP 2025-10-14；Agent Pay 2025</dd><dt>identity</dt><dd>TAP HTTP 签名 + Agentic Directory；Mastercard KYA</dd><dt>auth</dt><dd>Visa token + 用户限额；Mastercard Passkeys + 预授权</dd><dt>status</dt><dd>2026 真实交易 / live pilots</dd><dt>settlement</dt><dd>卡网络，不是链上结算</dd></dl>
+<div class="u26-block"><b>Why it matters</b><p>It fills a missing layer: agent payments are not only on-chain. Card networks already run real transactions with signatures, tokens and biometrics. Compared with AP2’s mandate layer, it shows who authorises, who settles and who only has a spec.</p></div>
+<div class="u26-block u26-boundary"><b>Boundary / what it does not claim</b><p>TAP and Agent Pay are different standards and cannot substitute for each other; they depend on card networks and issuers, and refunds, disputes and chargebacks stay under existing card rules. AP2 still has no publicly confirmed production transaction as of October 2026; writing “card networks are live” as “AP2 is everywhere” conflates layers.</p></div>
+<p class="u26-src">Sources：<a href="https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.21716.html?categoryid=2826687" rel="noopener" target="_blank">Visa TAP launch</a> · <a href="https://www.visa.co.uk/about-visa/newsroom/press-releases.3457328.html" rel="noopener" target="_blank">Visa Europe live</a> · <a href="https://investor.visa.com/news/news-details/2026/Visa-BILL-and-Billtrust-Launch-First-Live-Pilot-for-Trusted-AI-Agent-Payments-Between-Buyer-and-Supplier-Platforms/default.aspx" rel="noopener" target="_blank">BILL + Billtrust pilot</a> · <a href="https://www.mastercard.com/news/ap/en/newsroom/press-releases/en/2026/mastercard-delivers-its-first-live-agentic-transaction-in-singapore-with-dbs-and-uob" rel="noopener" target="_blank">Mastercard Agent Pay</a> · <a href="https://www.mastercard.com/europe/en/news-and-trends/stories/2026/agentic-commerce-identity-know-your-agent.html" rel="noopener" target="_blank">Mastercard Trust Framework</a></p>
+</article><article class="u26-card" id="erc-4337">
+<div class="u26-meta"><span class="u26-badge">2021-09</span><span class="u26-tag">Protocol / account abstraction</span></div>
+<h2>ERC-4337: account abstraction without consensus changes</h2>
+<p class="u26-p">UserOperation + a separate mempool + Bundler + EntryPoint + Paymaster; custom signatures, batching and sponsored gas without touching the consensus layer.</p>
+<dl class="u26-dl"><dt>created</dt><dd>2021-09-29</dd><dt>object</dt><dd>UserOperation</dd><dt>roles</dt><dd>EntryPoint / Bundler / Paymaster</dd><dt>status</dt><dd>ERC Review</dd></dl>
+<div class="u26-block"><b>Why it matters</b><p>It is the base that “agent wallets” and sponsorship cannot avoid; understanding the alt mempool and Paymaster is how you tell real on-chain execution from a custodial account.</p></div>
+<div class="u26-block u26-boundary"><b>Boundary / what it does not claim</b><p>The alt mempool brings bundler centralisation and censorship risk; Paymaster sponsorship can be abused; EntryPoint versions need separate compatibility checks; avoiding consensus changes leaves EOA + contract underneath. It does not claim guaranteed gasless transactions or the only AA route.</p></div>
+<p class="u26-src">Sources：<a href="https://eips-wg.github.io/EIPs/4337/" rel="noopener" target="_blank">EIP-4337 spec</a> · <a href="https://docs.erc4337.io/core-standards/erc-4337" rel="noopener" target="_blank">ERC-4337 docs</a></p>
+</article></div>
+<p class="u26-note"><b>Next：</b><a href="https://chain.specul.com/en/">Back to all chain entries →</a></p>
+</div></section>
+</main>
+<footer class="site-footer foot-single">
+<div class="container foot-line">
+<div class="foot-brand">
+<span class="foot-brand-main">
+<span aria-hidden="true" class="brand-dot"></span>
+<span class="foot-copy">Specul · specul.com</span>
+</span>
+<span class="foot-license"><a href="https://specul.com/LICENSE-CONTENT.txt">Content CC BY 4.0</a><span aria-hidden="true" class="sep">·</span><a href="https://specul.com/LICENSE.txt">Code MIT</a><span aria-hidden="true" class="sep">·</span><a class="foot-source" href="https://github.com/speculcom/ai-handbook" rel="noopener" target="_blank">Source</a></span>
+</div>
+<nav aria-label="Footer site links" class="foot-sites">
+<a class="site-link" href="https://specul.com/en/">Home</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://learn.specul.com/en/">Learn</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://tools.specul.com/en/">Tools</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://models.specul.com/en/">Models</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://demos.specul.com/en/">Demos</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://oss.specul.com/en/">OSS</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://hardware.specul.com/en/">Compute</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://papers.specul.com/en/">Papers</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://chain.specul.com/en/">Chain</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://nav.specul.com/en/">Directory</a>
+</nav>
+<nav aria-label="Legal and corrections" class="foot-legal">
+<a href="https://specul.com/en/legal.html">Legal</a><span aria-hidden="true" class="sep">·</span>
+<a href="https://specul.com/en/legal.html#s8">Privacy</a><span aria-hidden="true" class="sep">·</span>
+<a href="https://specul.com/en/correct.html">Corrections</a>
+</nav>
+</div>
+</footer>
+<nav aria-label="快捷导航" class="nav-tabbar nav-tabbar-1row">
+<a href="https://specul.com/en/"><span aria-hidden="true" class="ti">◎</span>Home</a>
+<a href="https://learn.specul.com/en/"><span aria-hidden="true" class="ti">▤</span>Learn</a>
+<a href="https://tools.specul.com/en/"><span aria-hidden="true" class="ti">◈</span>Tools</a>
+<a href="https://models.specul.com/en/"><span aria-hidden="true" class="ti">▦</span>Models</a>
+<a href="https://demos.specul.com/en/"><span aria-hidden="true" class="ti">▷</span>Demos</a>
+<a href="https://oss.specul.com/en/"><span aria-hidden="true" class="ti">▧</span>OSS</a>
+<a href="https://hardware.specul.com/en/"><span aria-hidden="true" class="ti">▣</span>Chips</a>
+<a href="https://papers.specul.com/en/"><span aria-hidden="true" class="ti">▥</span>Papers</a>
+<a aria-current="page" href="https://chain.specul.com/en/"><span aria-hidden="true" class="ti">◇</span>Chain</a>
+<a data-nav-group="external" href="https://nav.specul.com/en/"><span aria-hidden="true" class="ti">↗</span>Nav</a>
+</nav>
+</body>
+</html>
